@@ -3,3 +3,6 @@
   <h2 class="text-success">{{ seanceName }}</h2>
   <p class="bg-info text-dark">{{ seanceSummary }}</p>
 </div>
+
+<app-etudiant [statutEtu]="statutEtudiant" [etudiants]="etudiants"></app-etudiant>
+<button class="btn btn-success centered-button" [disabled]="!estAuth" (click)="rendTousPres()">Tous présents</button>
