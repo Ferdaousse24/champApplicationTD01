@@ -9,5 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'applicationTest';
+  title = 'Module Champ d\'applications';
+  seanceName = 'Séance TP 1';
+  seanceSummary = 'Prise en main d\'Angular, première application';
 }
