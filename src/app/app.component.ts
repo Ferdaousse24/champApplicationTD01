@@ -32,5 +32,6 @@ export class AppComponent {
 
   rendTousPres(){
     console.log("bouton préssé !")
+    this.statutEtudiant = "dormant";
   }
 }
