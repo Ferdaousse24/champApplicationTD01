@@ -1,0 +1,7 @@
+.carre-rouge {
+    width: 3rem; /* Largeur */
+    height: 3rem; /* Hauteur */
+    background-color: red; /* Couleur de fond */
+    border: 1px solid black; /* Optionnel : bordure noire */
+  }
+  

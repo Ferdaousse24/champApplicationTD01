@@ -4,5 +4,7 @@
   <p class="bg-info text-dark">{{ seanceSummary }}</p>
 </div>
 
-<app-etudiant [statutEtu]="statutEtudiant" [etudiants]="etudiants"></app-etudiant>
+<app-etudiant [statutEtu]="statutEtudiant" [etudiants]="etudiants" [commentaireEtudiant]="commentaireSeance"></app-etudiant>
+<input type="text" class="form−control" [(ngModel)]= "commentaireSeance"/>
 <button class="btn btn-success centered-button" [disabled]="!estAuth" (click)="rendTousPres()">Tous présents</button>
+<p class="bg-info">{{commentaireSeance}}</p>

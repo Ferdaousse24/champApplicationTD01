@@ -1,7 +1,8 @@
 <div class="card card-small text-center">
     <ul class="list-unstyled">
         <li *ngFor="let etudiant of etudiants">
-          <p> --- Nom  : {{ returnNomEtu(etudiant) }} --- prenom : {{ returnPrenomEtu(etudiant) }} -- statut : {{statutEtu}}</p>
+          <p> --- Nom  : {{ returnNomEtu(etudiant) }} --- prenom : {{ returnPrenomEtu(etudiant) }} -- statut : {{statutEtu}} -- commentaire : {{commentaireEtudiant}} --</p>
+          <div *ngIf="statutEtu === 'absent'" class="carre-rouge" ></div>
         </li>
       </ul> 
     </div>

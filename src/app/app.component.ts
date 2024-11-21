@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
     RouterOutlet,
-    EtudiantComponent
+    EtudiantComponent,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -25,7 +26,7 @@ export class AppComponent {
     { nomEtu: 'Bon', prenomEtu: 'Jean' },
     { nomEtu: 'Doe', prenomEtu: 'John' }
   ];
-  
+  commentaireSeance = "";
   constructor(){
     setTimeout ( ( ) => { this.estAuth = true;} ,3000 ) ;
   }
