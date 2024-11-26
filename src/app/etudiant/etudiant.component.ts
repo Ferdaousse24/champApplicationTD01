@@ -1,24 +1,20 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-etudiant',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './etudiant.component.html',
-  styleUrl: './etudiant.component.css'
+  styleUrls: ['./etudiant.component.css']
 })
-
 export class EtudiantComponent {
-[x: string]: any;
-  @Input() statutEtu = "";
-  @Input() etudiants: { nomEtu: string; prenomEtu: string }[] = [];
-  @Input() commentaireEtudiant ="";
+  @Input() statutEtu: string = '';
+  @Input() etudiants: { nom: string; prenom: string; statut: string }[] = []; // Correspond à tabEtudiant
+  @Input() commentaireEtudiant: string = '';
 
-  returnNomEtu(etudiant: { nomEtu: string }): string {
-    return etudiant.nomEtu;
-  }  
-  
-  returnPrenomEtu(etudiant: {prenomEtu: string}): string{
-    return etudiant.prenomEtu;
+  // Fonction pour retourner la couleur selon le statut
+  getColorEtu(etudiant: { statut: string }): string {
+    return etudiant.statut === 'absent' ? 'red' : 'black';
   }
 }

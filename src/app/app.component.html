@@ -4,7 +4,15 @@
   <p class="bg-info text-dark">{{ seanceSummary }}</p>
 </div>
 
-<app-etudiant [statutEtu]="statutEtudiant" [etudiants]="etudiants" [commentaireEtudiant]="commentaireSeance"></app-etudiant>
-<input type="text" class="form−control" [(ngModel)]= "commentaireSeance"/>
-<button class="btn btn-success centered-button" [disabled]="!estAuth" (click)="rendTousPres()">Tous présents</button>
-<p class="bg-info">{{commentaireSeance}}</p>
+<!-- Passage de tabEtudiant au composant enfant -->
+<app-etudiant
+  [statutEtu]="statutEtudiant"
+  [etudiants]="tabEtudiant"
+  [commentaireEtudiant]="commentaireSeance"
+></app-etudiant>
+
+<input type="text" class="form-control" [(ngModel)]="commentaireSeance" />
+<button class="btn btn-success centered-button" [disabled]="!estAuth" (click)="rendTousPres()">
+  Tous présents
+</button>
+<p class="bg-info">{{ commentaireSeance }}</p>
